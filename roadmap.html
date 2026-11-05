@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sovereign Runtime Stack - Proof-Gated Roadmap</title>
+<!-- GENERATED ARTIFACT - DO NOT HAND-EDIT. Run: node scripts/generate-timeline.mjs -->
+<style>
+  :root {
+    --bg: #111213;
+    --fg: #e6e6e6;
+    --muted: #9a9a9a;
+    --line: #2a2b2d;
+    --card: #18191b;
+    --live: #6fbf73;
+    --built_unproven: #d4a017;
+    --partial: #c9893a;
+    --design_only: #8a8a8a;
+    --superseded: #8a6a6a;
+    --planned: #6a9cc9;
+    --founder: #c9893a;
+    --agent: #6fbf73;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 24px 64px;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .container { max-width: 1120px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 24px; }
+  h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: -0.5px; }
+  .tagline { color: var(--muted); font-size: 14px; margin: 0; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; align-items: center; }
+  .filter-btn {
+    background: var(--card);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: border-color 150ms ease, background 150ms ease;
+  }
+  .filter-btn.active, .filter-btn:hover { border-color: var(--fg); background: #222427; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .phase-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); }
+  .badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 99px;
+    border: 1px solid currentColor;
+    white-space: nowrap;
+  }
+  .status-live { color: var(--live); }
+  .status-built_unproven { color: var(--built_unproven); }
+  .status-partial { color: var(--partial); }
+  .status-design_only { color: var(--design_only); }
+  .status-planned { color: var(--planned); }
+  .status-superseded { color: var(--superseded); }
+  .card h3 { margin: 0; font-size: 16px; }
+  .summary { margin: 0; font-size: 13px; color: #cccccc; }
+  .meta { font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; margin-top: auto; }
+  .meta div { margin-bottom: 4px; }
+  .sha { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--fg); background: #222427; padding: 1px 5px; border-radius: 4px; }
+  .nav-link { color: var(--planned); text-decoration: none; font-size: 13px; margin-left: auto; }
+  .nav-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Sovereign Runtime Stack</h1>
+    <p class="tagline">Proof-gated engineering roadmap and commit spine. Nothing renders live without a commit SHA and verification proof.</p>
+  </header>
+  <div class="toolbar">
+    <button class="filter-btn active" onclick="filterCards('all', this)">All (6)</button>
+    <button class="filter-btn" onclick="filterCards('live', this)">Live</button>
+    <button class="filter-btn" onclick="filterCards('built_unproven', this)">Built Unproven</button>
+    <button class="filter-btn" onclick="filterCards('partial', this)">Partial</button>
+    <button class="filter-btn" onclick="filterCards('design_only', this)">Design Only</button>
+    <button class="filter-btn" onclick="filterCards('planned', this)">Planned</button>
+    <a class="nav-link" href="build-timeline.html">View Chronological Build Timeline &rarr;</a>
+  </div>
+  <section class="grid" id="roadmap-grid">
+    
+    <article class="card" data-status="live">
+      <div class="card-head">
+        <span class="phase-label">Phase 1: Core Substrate</span>
+        <span class="badge status-live">live</span>
+      </div>
+      <h3>Deterministic Config &amp; Schema Compiler</h3>
+      <p class="summary">Zero-dependency schema validator and deterministic configuration loader across local and container runtimes.</p>
+      <div class="meta">
+        <div><strong>Owner:</strong> founder &middot; <strong>Date:</strong> 2026-09-12</div>
+        <div><strong>Commit:</strong> <span class="sha">e4f91a2</span></div>
+        <div><strong>Proof:</strong> node scripts/generate-timeline.mjs --check exited 0; 42/42 unit vectors passed.</div>
+        <div><strong>Gaps:</strong> None</div>
+      </div>
+    </article>
+
+    <article class="card" data-status="live">
+      <div class="card-head">
+        <span class="phase-label">Phase 1: Core Substrate</span>
+        <span class="badge status-live">live</span>
+      </div>
+      <h3>Local Inference Engine Pool</h3>
+      <p class="summary">Multi-slot worker pool with memory-locked weights and strict health probe timeouts.</p>
+      <div class="meta">
+        <div><strong>Owner:</strong> agent &middot; <strong>Date:</strong> 2026-09-28</div>
+        <div><strong>Commit:</strong> <span class="sha">9c31b0e</span></div>
+        <div><strong>Proof:</strong> Measured 39.7 tok/s on Q4_K_M; /health returned 200 OK under 3-slot parallel load.</div>
+        <div><strong>Gaps:</strong> Dynamic slot scaling under memory pressure is deferred to Phase 2.</div>
+      </div>
+    </article>
+
+    <article class="card" data-status="built_unproven">
+      <div class="card-head">
+        <span class="phase-label">Phase 2: Verification &amp; Guardrails</span>
+        <span class="badge status-built_unproven">built unproven</span>
+      </div>
+      <h3>Pre-Deploy SQL Migration Guard</h3>
+      <p class="summary">Static analyzer that blocks non-idempotent DDL statements and unguarded table drops before CI deploy.</p>
+      <div class="meta">
+        <div><strong>Owner:</strong> agent &middot; <strong>Date:</strong> 2026-10-08</div>
+        <div><strong>Commit:</strong> <span class="sha">7b20d11</span></div>
+        
+        <div><strong>Gaps:</strong> Code committed and unit tested locally, but not yet wired into the production release gate.</div>
+      </div>
+    </article>
+
+    <article class="card" data-status="partial">
+      <div class="card-head">
+        <span class="phase-label">Phase 2: Verification &amp; Guardrails</span>
+        <span class="badge status-partial">partial</span>
+      </div>
+      <h3>Cross-Node Telemetry Aggregator</h3>
+      <p class="summary">Collects GPU memory, token throughput, and queue depth across worker nodes.</p>
+      <div class="meta">
+        <div><strong>Owner:</strong> agent &middot; <strong>Date:</strong> 2026-10-19</div>
+        <div><strong>Commit:</strong> <span class="sha">3a18f44</span></div>
+        
+        <div><strong>Gaps:</strong> Collector daemon is running; persistent time-series retention store is still stubbed.</div>
+      </div>
+    </article>
+
+    <article class="card" data-status="design_only">
+      <div class="card-head">
+        <span class="phase-label">Phase 3: Distributed Scale</span>
+        <span class="badge status-design_only">design only</span>
+      </div>
+      <h3>Zero-Downtime Worker Failover</h3>
+      <p class="summary">Automatic drain and re-route of active inference streams when a physical node drops offline.</p>
+      <div class="meta">
+        <div><strong>Owner:</strong> founder &middot; <strong>Date:</strong> 2026-11-01</div>
+        
+        
+        <div><strong>Gaps:</strong> Specification finalized in architecture docs; zero implementing code committed.</div>
+      </div>
+    </article>
+
+    <article class="card" data-status="planned">
+      <div class="card-head">
+        <span class="phase-label">Phase 3: Distributed Scale</span>
+        <span class="badge status-planned">planned</span>
+      </div>
+      <h3>Hardware Enclave Key Sealing</h3>
+      <p class="summary">Bind node identity keys directly to hardware TPM/Secure Enclave registers.</p>
+      <div class="meta">
+        <div><strong>Owner:</strong> founder &middot; <strong>Date:</strong> 2026-12-01</div>
+        
+        
+        <div><strong>Gaps:</strong> Scheduled for Q1 after Phase 2 verification gates close.</div>
+      </div>
+    </article>
+  </section>
+</div>
+<script>
+function filterCards(status, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#roadmap-grid .card').forEach(card => {
+    card.style.display = (status === 'all' || card.dataset.status === status) ? 'flex' : 'none';
+  });
+}
+</script>
+</body>
+</html>

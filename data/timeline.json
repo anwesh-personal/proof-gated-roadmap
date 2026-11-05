@@ -1,0 +1,90 @@
+{
+  "project": {
+    "name": "Sovereign Runtime Stack",
+    "tagline": "Proof-gated engineering roadmap and commit spine. Nothing renders live without a commit SHA and verification proof.",
+    "updated_at": "2026-11-05"
+  },
+  "milestones": [
+    {
+      "id": "ms-01",
+      "phase": "Phase 1: Core Substrate",
+      "title": "Deterministic Config & Schema Compiler",
+      "owner": "founder",
+      "status": "live",
+      "date": "2026-09-12",
+      "sha": "e4f91a2",
+      "summary": "Zero-dependency schema validator and deterministic configuration loader across local and container runtimes.",
+      "proof": "node scripts/generate-timeline.mjs --check exited 0; 42/42 unit vectors passed.",
+      "gaps": "None"
+    },
+    {
+      "id": "ms-02",
+      "phase": "Phase 1: Core Substrate",
+      "title": "Local Inference Engine Pool",
+      "owner": "agent",
+      "status": "live",
+      "date": "2026-09-28",
+      "sha": "9c31b0e",
+      "summary": "Multi-slot worker pool with memory-locked weights and strict health probe timeouts.",
+      "proof": "Measured 39.7 tok/s on Q4_K_M; /health returned 200 OK under 3-slot parallel load.",
+      "gaps": "Dynamic slot scaling under memory pressure is deferred to Phase 2."
+    },
+    {
+      "id": "ms-03",
+      "phase": "Phase 2: Verification & Guardrails",
+      "title": "Pre-Deploy SQL Migration Guard",
+      "owner": "agent",
+      "status": "built_unproven",
+      "date": "2026-10-08",
+      "sha": "7b20d11",
+      "summary": "Static analyzer that blocks non-idempotent DDL statements and unguarded table drops before CI deploy.",
+      "proof": "",
+      "gaps": "Code committed and unit tested locally, but not yet wired into the production release gate."
+    },
+    {
+      "id": "ms-04",
+      "phase": "Phase 2: Verification & Guardrails",
+      "title": "Cross-Node Telemetry Aggregator",
+      "owner": "agent",
+      "status": "partial",
+      "date": "2026-10-19",
+      "sha": "3a18f44",
+      "summary": "Collects GPU memory, token throughput, and queue depth across worker nodes.",
+      "proof": "",
+      "gaps": "Collector daemon is running; persistent time-series retention store is still stubbed."
+    },
+    {
+      "id": "ms-05",
+      "phase": "Phase 3: Distributed Scale",
+      "title": "Zero-Downtime Worker Failover",
+      "owner": "founder",
+      "status": "design_only",
+      "date": "2026-11-01",
+      "sha": "",
+      "summary": "Automatic drain and re-route of active inference streams when a physical node drops offline.",
+      "proof": "",
+      "gaps": "Specification finalized in architecture docs; zero implementing code committed."
+    },
+    {
+      "id": "ms-06",
+      "phase": "Phase 3: Distributed Scale",
+      "title": "Hardware Enclave Key Sealing",
+      "owner": "founder",
+      "status": "planned",
+      "date": "2026-12-01",
+      "sha": "",
+      "summary": "Bind node identity keys directly to hardware TPM/Secure Enclave registers.",
+      "proof": "",
+      "gaps": "Scheduled for Q1 after Phase 2 verification gates close."
+    }
+  ],
+  "inbox": [
+    {
+      "sha": "c8104f1",
+      "date": "2026-11-04",
+      "author": "dev-agent",
+      "subject": "feat(ci): add strict exit codes to preflight probe",
+      "note": "Auto-captured by post-commit hook; awaiting promotion to a milestone."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sovereign Runtime Stack - Build Timeline</title>
+<!-- GENERATED ARTIFACT - DO NOT HAND-EDIT. Run: node scripts/generate-timeline.mjs -->
+<style>
+  :root {
+    --bg: #111213;
+    --fg: #e6e6e6;
+    --muted: #9a9a9a;
+    --line: #2a2b2d;
+    --card: #18191b;
+    --live: #6fbf73;
+    --built_unproven: #d4a017;
+    --partial: #c9893a;
+    --design_only: #8a8a8a;
+    --superseded: #8a6a6a;
+    --planned: #6a9cc9;
+    --founder: #c9893a;
+    --agent: #6fbf73;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 24px 64px;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .container { max-width: 1120px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 20px; margin-bottom: 24px; }
+  h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: -0.5px; }
+  .tagline { color: var(--muted); font-size: 14px; margin: 0; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; align-items: center; }
+  .filter-btn {
+    background: var(--card);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: border-color 150ms ease, background 150ms ease;
+  }
+  .filter-btn.active, .filter-btn:hover { border-color: var(--fg); background: #222427; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .phase-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); }
+  .badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 99px;
+    border: 1px solid currentColor;
+    white-space: nowrap;
+  }
+  .status-live { color: var(--live); }
+  .status-built_unproven { color: var(--built_unproven); }
+  .status-partial { color: var(--partial); }
+  .status-design_only { color: var(--design_only); }
+  .status-planned { color: var(--planned); }
+  .status-superseded { color: var(--superseded); }
+  .card h3 { margin: 0; font-size: 16px; }
+  .summary { margin: 0; font-size: 13px; color: #cccccc; }
+  .meta { font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; margin-top: auto; }
+  .meta div { margin-bottom: 4px; }
+  .sha { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--fg); background: #222427; padding: 1px 5px; border-radius: 4px; }
+  .nav-link { color: var(--planned); text-decoration: none; font-size: 13px; margin-left: auto; }
+  .nav-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Sovereign Runtime Stack - Commit Spine</h1>
+    <p class="tagline">Chronological verification ledger and auto-captured Git commit inbox.</p>
+  </header>
+  <div class="toolbar">
+    <a class="nav-link" style="margin-left:0" href="roadmap.html">&larr; Back to Phase Roadmap</a>
+  </div>
+  <h2>Verified &amp; Tracked Milestones</h2>
+  <section class="grid">
+    <div class="card">
+      <div class="card-head">
+        <span class="phase-label">2026-12-01 &middot; ms-06</span>
+        <span class="badge status-planned">planned</span>
+      </div>
+      <h3>Hardware Enclave Key Sealing</h3>
+      <p class="summary">Bind node identity keys directly to hardware TPM/Secure Enclave registers.</p>
+      <div class="meta">
+        
+        
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="phase-label">2026-11-01 &middot; ms-05</span>
+        <span class="badge status-design_only">design only</span>
+      </div>
+      <h3>Zero-Downtime Worker Failover</h3>
+      <p class="summary">Automatic drain and re-route of active inference streams when a physical node drops offline.</p>
+      <div class="meta">
+        
+        
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="phase-label">2026-10-19 &middot; ms-04</span>
+        <span class="badge status-partial">partial</span>
+      </div>
+      <h3>Cross-Node Telemetry Aggregator</h3>
+      <p class="summary">Collects GPU memory, token throughput, and queue depth across worker nodes.</p>
+      <div class="meta">
+        <div><strong>SHA:</strong> <span class="sha">3a18f44</span></div>
+        
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="phase-label">2026-10-08 &middot; ms-03</span>
+        <span class="badge status-built_unproven">built unproven</span>
+      </div>
+      <h3>Pre-Deploy SQL Migration Guard</h3>
+      <p class="summary">Static analyzer that blocks non-idempotent DDL statements and unguarded table drops before CI deploy.</p>
+      <div class="meta">
+        <div><strong>SHA:</strong> <span class="sha">7b20d11</span></div>
+        
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="phase-label">2026-09-28 &middot; ms-02</span>
+        <span class="badge status-live">live</span>
+      </div>
+      <h3>Local Inference Engine Pool</h3>
+      <p class="summary">Multi-slot worker pool with memory-locked weights and strict health probe timeouts.</p>
+      <div class="meta">
+        <div><strong>SHA:</strong> <span class="sha">9c31b0e</span></div>
+        <div><strong>Proof:</strong> Measured 39.7 tok/s on Q4_K_M; /health returned 200 OK under 3-slot parallel load.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="phase-label">2026-09-12 &middot; ms-01</span>
+        <span class="badge status-live">live</span>
+      </div>
+      <h3>Deterministic Config &amp; Schema Compiler</h3>
+      <p class="summary">Zero-dependency schema validator and deterministic configuration loader across local and container runtimes.</p>
+      <div class="meta">
+        <div><strong>SHA:</strong> <span class="sha">e4f91a2</span></div>
+        <div><strong>Proof:</strong> node scripts/generate-timeline.mjs --check exited 0; 42/42 unit vectors passed.</div>
+      </div>
+    </div></section>
+  <h2 style="margin-top:36px">Auto-Captured Git Commit Inbox (1)</h2>
+  <section class="grid">
+    <div class="card">
+      <div class="card-head">
+        <span class="phase-label">2026-11-04 &middot; dev-agent</span>
+        <span class="sha">c8104f1</span>
+      </div>
+      <h3>feat(ci): add strict exit codes to preflight probe</h3>
+      <p class="summary">Auto-captured by post-commit hook; awaiting promotion to a milestone.</p>
+    </div></section>
+</div>
+</body>
+</html>
